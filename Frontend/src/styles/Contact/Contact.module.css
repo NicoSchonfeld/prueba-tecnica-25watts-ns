@@ -1,0 +1,225 @@
+@import url(../index.css);
+
+.sectionContact {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--unnamed-color-f2f4f1);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.containerLeft {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.containerRight {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 20px 200px;
+  z-index: 1;
+}
+
+.image {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.title {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    var(--unnamed-font-size-39) / var(--unnamed-line-spacing-45)
+    var(--unnamed-font-family-poppins);
+  letter-spacing: var(--unnamed-character-spacing-0-55);
+  color: var(--unnamed-color-343434);
+  text-align: left;
+  font: normal normal 600 39px/45px Poppins;
+  letter-spacing: 0.55px;
+  color: #343434;
+}
+
+.titleColor {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    var(--unnamed-font-size-39) / var(--unnamed-line-spacing-45)
+    var(--unnamed-font-family-poppins);
+  letter-spacing: var(--unnamed-character-spacing-0-55);
+  color: var(--unnamed-color-e0752f);
+  text-align: left;
+  font: normal normal 600 39px/45px Poppins;
+  letter-spacing: 0.55px;
+  color: #e0752f;
+}
+
+.form {
+  display: flex;
+
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inputs {
+  background-color: transparent;
+  border: transparent;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #bebebe;
+
+  max-width: 600px;
+  min-width: 350px;
+  max-height: 100px;
+}
+
+.inputs::placeholder {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0-22);
+  color: var(--unnamed-color-5f6368);
+  text-align: left;
+  font: normal normal medium 16px/21px Roboto;
+  letter-spacing: 0.22px;
+  color: #5f6368;
+  font-weight: 500;
+}
+
+.inputs:focus {
+  outline: none;
+  border-bottom: 1px solid #e0752f;
+}
+
+.inputs:focus::placeholder {
+  color: #e0752f;
+}
+
+.button {
+  width: 144px;
+  height: 48px;
+
+  background: var(--unnamed-color-e0752f) 0% 0% no-repeat padding-box;
+  background: #e0752f 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  border: #e0752f;
+
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0-22);
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  font: normal normal medium 16px/21px Roboto;
+  letter-spacing: 0.22px;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.containerDecoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 398px;
+  height: 100vh;
+  background: var(--unnamed-color-dce1da) 0% 0% no-repeat padding-box;
+  background: #dce1da 0% 0% no-repeat padding-box;
+}
+
+/* Tablet */
+@media screen and (max-width: 1300px) {
+  .sectionContact {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .containerDecoration {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+    gap: 100px;
+    flex-direction: column;
+  }
+
+  .containerRight {
+    padding: 20px;
+    z-index: 0;
+  }
+
+  .image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .containerLeft {
+    align-items: center;
+  }
+
+  .form {
+    align-items: center;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
+  .sectionContact {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .containerDecoration {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+    gap: 100px;
+    flex-direction: column;
+  }
+
+  .containerRight {
+    padding: 20px;
+    z-index: 0;
+  }
+
+  .image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .containerLeft {
+    align-items: center;
+  }
+
+  .form {
+    align-items: center;
+  }
+
+  .inputs {
+    background-color: transparent;
+    border: transparent;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #bebebe;
+
+    max-width: 600px;
+    min-width: 250px;
+    max-height: 100px;
+  }
+}

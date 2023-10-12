@@ -1,0 +1,149 @@
+@import url(../index.css);
+
+.sectionMoreDetails {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--unnamed-color-ffffff);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.containerTitles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    var(--unnamed-font-size-39) / var(--unnamed-line-spacing-45)
+    var(--unnamed-font-family-poppins);
+  letter-spacing: var(--unnamed-character-spacing-0-55);
+  color: var(--unnamed-color-343434);
+  text-align: center;
+  font: normal normal 600 39px/45px Poppins;
+  letter-spacing: 0.55px;
+  color: #343434;
+}
+
+.paragraph {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-28) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0-22);
+  color: var(--unnamed-color-343434);
+  text-align: center;
+  font: normal normal normal 16px/28px Roboto;
+  letter-spacing: 0.22px;
+  color: #343434;
+
+  max-width: 768px;
+}
+
+.containerInfo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.containerLeft {
+  width: 100%;
+  height: auto;
+  padding: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.containerRight {
+  width: 100%;
+  height: auto;
+  padding: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.textList {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-28) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0-22);
+  color: var(--unnamed-color-343434);
+  text-align: left;
+  font: normal normal normal 16px/28px Roboto;
+  letter-spacing: 0.22px;
+  color: #343434;
+
+  max-width: 402px;
+}
+
+/* Tablet */
+@media screen and (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
+  .sectionMoreDetails {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .containerInfo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .containerLeft {
+    justify-content: center;
+  }
+
+  .containerRight {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
+  .sectionMoreDetails {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .containerInfo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .containerLeft {
+    justify-content: center;
+  }
+
+  .containerRight {
+    justify-content: center;
+  }
+}
