@@ -1,15 +1,15 @@
 ![Logo](https://i.ibb.co/hMGTZqQ/25-Watts-logo.png)
 
-# Prueba tecnica de 25Watts para FullStack Developer 👩🏻‍💻
+# Prueba técnica de 25Watts para FullStack Developer 👩🏻‍💻
 
-¡Hola! Me llamo Nicolás Schönfeld y esta es mi prueba tecnica para aplicar a 25Watts como FullStack Developer.
+¡Hola! Me llamo Nicolás Schönfeld y esta es mi prueba técnica para aplicar a 25Watts como FullStack Developer.
 
-Por lo general en mis proyectos utilizo Next.js y librerias para añadir estilos a la web como tailwind css ya que me facilitan el trabajo.
+Por lo general en mis proyectos utilizo Next.js y librerías para añadir estilos a la web como tailwind css ya que me facilitan el trabajo.
 
 Más de mis proyectos:
 [Proyectos](https://nicoschonfeld.vercel.app/)
 
-Sin enbargo en esta ocasion quise respetar las consignas de la prueba y hacerlo lo mas simple posible.
+Sin embargo en esta ocasión quise respetar las consignas de la prueba y hacerlo lo más simple posible.
 
 ## Requisitos:
 
@@ -32,7 +32,7 @@ Vista previa de la landing
 
 Evaluaremos en términos de prolijidad y diseño responsive (mobile - tablet - desktop). Se le entrega diseño desktop y usted tiene que hacer adaptación a tablet y mobile.
 
-## Tecnologias usadas en la prueba
+## Tecnologías usadas en la prueba
 
 **Cliente:** React.js, Css, Framer-Motion, React-Icons, React-Scroll, Swiper, React-router-dom, React-hook-form.
 
@@ -81,13 +81,13 @@ En backend correr comando para ejecutar en modo desarrollador.
 
 ## Back-End
 
-Para realizar el Backend utilice Node y Express.js.
+Para realizar el Backend utilicé Node y Express.js.
 
-El proyecto esta organizado de la siguiente manera.
+El proyecto está organizado de la siguiente manera.
 
 ![App Screenshot](https://i.ibb.co/SnvkWkn/Carpetas-Backend.png)
 
-- **SRC** es carpeta raiz del proyecto.
+- **SRC** es carpeta raíz del proyecto.
 - **main.js** es donde se inicia la aplicación con Express llamando a las rutas para realizar los endpoints.
 - **router** contiene las rutas de la `/api`.
 - **controllers** contiene las funciones para cada request de las rutas.
@@ -106,13 +106,13 @@ El proyecto esta organizado de la siguiente manera.
   GET /api/slider
 ```
 
-Aclarar que los datos que se obtienen y se envian a la api, son datos hardcodeados y que no se guardan en ningun lado.
+Aclarar que los datos que se obtienen y se envían a la api, son datos hardcodeados y que no se guardan en ningún lado.
 
-Para guardar datos que se envian de un Front-End podemos utilizar bases de datos.
+Para guardar datos que se envían de un Front-End podemos utilizar bases de datos.
 
 En mi caso me gusta usar MySQL.
 
-Para integrar MySQL en el proyecto de Express, podemos instalar `npm i mysql2` y hacer la coneccion a la base de datos desde express creando tablas y guardando datos.
+Para integrar MySQL en el proyecto de Express, podemos instalar `npm i mysql2` y hacer la conexión a la base de datos desde express creando tablas y guardando datos.
 
 #### Enviar datos del formulario
 
@@ -122,24 +122,24 @@ Para integrar MySQL en el proyecto de Express, podemos instalar `npm i mysql2` y
 
 ## Front-End
 
-Para realizar el Frontend utilice Vite.js como herramienta de compilación para trabajar con React.js.
+Para realizar el Frontend utilicé Vite.js como herramienta de compilación para trabajar con React.js.
 
-El proyecto esta organizado de la siguiente manera.
+El proyecto está organizado de la siguiente manera.
 
 ![App Screenshot](https://i.ibb.co/894yhv3/Carpetas-Frontend.png)
 
-- **SRC** es carpeta raiz del proyecto.
-- **assets** que contiene todas las imagenes e iconos de la web.
-- **components** contienen componentes como `Navbar.jsx`, `Footer.jsx` y el icono de 25Watts transformado en componente `LogoWatts.jsx`.
+- **SRC** es carpeta raíz del proyecto.
+- **assets** que contiene todas las imágenes e iconos de la web.
+- **components** contiene componentes como `Navbar.jsx`, `Footer.jsx` y el icono de 25Watts transformado en componente `LogoWatts.jsx`.
 - **page** contiene todas las secciones de la landing page.
-- **styles** contiene todos los estilos de la página utlilizando `[name].module.css` para evitar confictos con otros archivos.
-- **App.jsx** contiene todos los componenes que se muestran en la web.
+- **styles** contiene todos los estilos de la página utilizando `[name].module.css` para evitar conflictos con otros archivos.
+- **App.jsx** contiene todos los componentes que se muestran en la web.
 - **main.jsx** es el archivo donde se carga la aplicación de React.
 
 ## Fetch
 
-Para obtener la información del Backend para la sección Slider y Products utilice `Fetch`.
-Por lo general casi siempre suelo utilizar librerias para hacer solisitudes HTTP como axios.
+Para obtener la información del Backend para la sección Slider y Products utilicé `Fetch`.
+Por lo general casi siempre suelo utilizar librerías para hacer solicitudes HTTP como `axios`.
 
 En el componente `App.jsx` se crean dos estados con `useState` que guardan la información obtenida de manera asíncrona mediante `Fetch` que se ejecuta cada vez que inicia la página gracias a un `useEffect`.
 
@@ -171,7 +171,7 @@ useEffect(() => {
 
 ## lazy loading
 
-Utilice `lazy` y `Suspense` para optimizar los componentes de la página.
+Utilicé `lazy` y `Suspense` para optimizar los componentes de la página.
 
 ```javascript
 import React, { Suspense, lazy, useEffect, useState } from "react";
@@ -230,13 +230,13 @@ export default App;
 
 ## Sitio diseñado en 12 columnas
 
-En este caso obte por utilizar `Flexbox` para estilar la web y hacerla responsive ya que es un modelo que se dominar.
+En este caso opté por utilizar `Flexbox` para estilar la web y hacerla responsive ya que es un modelo que domino.
 
-En algunas secciones como `Services` y `Footer` se utilizo `CSS Grid`.
+En algunas secciones como `Services` y `Footer` se utilizó `CSS Grid`.
 
 ## En la sección Products mostrar 3 de una cantidad total (12 o 15) elementos de manera random consumidos desde el backend.
 
-Esta funcion esta creada en el backend, a la hora de enviar los Products al cliente antes se ejecuta una funcion que devuelve los datos del array de manera random.
+Esta función está creada en el backend, a la hora de enviar los Products al cliente antes se ejecuta una función que devuelve los datos del array de manera aleatoria.
 
 El cliente obtiene los datos y los muestra en un carrusel limitando a una cantidad de 3 objetos.
 A medida que la página se va achicando, los objetos se van adaptando de manera responsive.
@@ -287,9 +287,9 @@ export const getProducts = (req, res) =>
 
 ## Carrusel
 
-Para hacer el carrusel tanto para el Slider del Home como para los Products, utilize la libreria `Swiper`.
+Para hacer el carrusel tanto para el Slider del Home como para los Products, utilicé la librería `Swiper`.
 
-Elegí esta opcion ya que es una libreria que te permite hacer sliders de una manera muy simple con pocal lineas de código.
+Elegí esta opción ya que es una librería que te permite hacer sliders de una manera muy simple con pocas líneas de código.
 
 ## Ejemplo
 
@@ -337,13 +337,12 @@ Elegí esta opcion ya que es una libreria que te permite hacer sliders de una ma
 
 ## Validar campos de formulario.
 
-Para validar los campos del formulario utilice la libreria `react-hook-form`.
+Para validar los campos del formulario utilicé la librería `react-hook-form`.
 
 ## Los enlaces del menú superior deben funcionar con efecto de smooth scrolling.
 
 Por lo general cuando queremos hacer el efecto smooth en una landing, solo hay que colocar una etiqueta `a` con su ruta `#home`
-
-y una seccion de la página con un id con la misma ruta `#home`
+y una sección de la página con un id con la misma ruta `#home`.
 
 ```javascript
 <a href='#home'>Home</a>
@@ -354,20 +353,19 @@ y una seccion de la página con un id con la misma ruta `#home`
 </section>
 ```
 
-Esto hace que al darle click al enlace nos lleve a la seccion que le especificamos. Si a esto en nuesto index.css le añádimos esta propiedad `scroll-behavior: smooth;`, la transision entre secciones va a tener un efecto smooth y se va a ver mas fluido.
+Esto hace que al darle click al enlace nos lleve a la sección que le especificamos. Si a esto en nuestro index.css le añadimos esta propiedad `scroll-behavior: smooth;`, la transición entre secciones va a tener un efecto smooth y se va a ver más fluido.
 
-## ¿Porque no hice eso?
+## ¿Por qué no hice eso?
 
-La razon de por que no lo hice de esa manera, es porque al dividir la pagina en componentes no me tomaba el id de cada seccion. Para lograrlo tenia que guardar el id y pasarlo entre componentes y era todo muy tedioso.
+La razón por la que no lo hice de esa manera, es porque al dividir la página en componentes no me tomaba el id de cada sección. Para lograrlo tenía que guardar el id y pasarlo entre componentes y era todo muy tedioso.
 
 ## Mi solución.
 
-Para solucionar esto utilice la libreria `React-Scroll` que me permite solo con importar el componente `Link` y `Element` realizar este efecto.
+Para solucionar esto utilicé la librería `React-Scroll` que me permite solo con importar el componente `Link` y `Element` realizar este efecto.
 
-El componente `Link` recibe como parametro la el id o la 'ruta' de la sección y más parametros como duracion de la transision etc...
+El componente `Link` recibe como parámetro el id o la ‘ruta’ de la sección y más parámetros como duración de la transición etc…
 
-El componente `Element` recibe el nombre/id que le asignamos a enlace.
-Para que funcione, el componente `Element` tiene que envolver la seccion a la que queramos ir y el componente `Link` funciona como una etiqueta `<a>`
+El componente `Element` recibe el nombre/id que le asignamos a enlace. Para que funcione, el componente `Element` tiene que envolver la sección a la que queramos ir y el componente `Link` funciona como una etiqueta `<a>`.
 
 ```javascript
 // Navbar
