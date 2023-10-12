@@ -17,12 +17,12 @@ const Contact = () => {
   const onSubmit = (data) => {
     if (data) {
       try {
-        //localhost:8989/contact
+        const url = "http://localhost:8989/api/contact";
 
-        fetch("http://localhost:8989/api/contact", {
+        fetch(url, {
           method: "POST",
           headers: {
-            "Content-Type": "aplication/json",
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(data),
         }).then((res) => console.log(res));
@@ -49,7 +49,7 @@ const Contact = () => {
                 {...register("name", {
                   required: {
                     value: true,
-                    message: "Este campo es obligatorio",
+                    message: "Este campo es obligatorio.",
                   },
                   maxLength: {
                     value: 20,
@@ -71,7 +71,7 @@ const Contact = () => {
                 {...register("email", {
                   required: {
                     value: true,
-                    message: "Este campo es obligatorio",
+                    message: "Este campo es obligatorio.",
                   },
                   pattern: {
                     value: `^w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$`,
@@ -91,7 +91,7 @@ const Contact = () => {
                 {...register("phone", {
                   required: {
                     value: true,
-                    message: "Este campo es obligatorio",
+                    message: "Este campo es obligatorio.",
                   },
                   minLength: {
                     value: 10,
@@ -111,7 +111,7 @@ const Contact = () => {
                 {...register("message", {
                   required: {
                     value: true,
-                    message: "Este campo es obligatorio",
+                    message: "Este campo es obligatorio.",
                   },
                   maxLength: {
                     value: 255,

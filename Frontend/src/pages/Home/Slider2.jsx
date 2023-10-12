@@ -1,10 +1,19 @@
 import React from "react";
 
 import styles from "../../styles/HomePage/HomePage.module.css";
+import { Link } from "react-scroll";
 
 const Slider2 = ({ slider }) => {
+  const sectionHome = {
+    width: "100%",
+    height: "100vh",
+    backgroundImage: `url(${slider?.image})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  };
+
   return (
-    <main className={styles.sectionHome2}>
+    <main style={sectionHome}>
       <div className={styles.conteiner}>
         <h1 className={styles.title}>
           {/* Proin elementum <br />
@@ -18,7 +27,15 @@ const Slider2 = ({ slider }) => {
           {slider?.text}
         </p>
 
-        <button className={styles.button}>Read more</button>
+        <Link
+          to={"about_us"}
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={200}
+        >
+          <button className={styles.button}>Read more</button>
+        </Link>
 
         <div className={styles.conteinerNavigarion}>
           <div className={styles.navigationDefault}></div>

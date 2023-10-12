@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import HomePage from "./pages/Home/HomePage";
-import Navbar from "./components/Navbar";
-import AboutUs from "./pages/AboutUs/AboutUs";
-import Services from "./pages/Services/Services";
-import Products from "./pages/Products/Products";
-import MoreDetails from "./pages/MoreDetails/MoreDetails";
-import Contact from "./pages/Contact/Contact";
-import Footer from "./components/Footer";
+import React, { Suspense, lazy, useEffect, useState } from "react";
+import Loading from "./pages/Loading/Loading";
+
+const Navbar = lazy(() => import("./components/Navbar"));
+const HomePage = lazy(() => import("./pages/Home/HomePage"));
+const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
+const Services = lazy(() => import("./pages/Services/Services"));
+const Products = lazy(() => import("./pages/Products/Products"));
+const MoreDetails = lazy(() => import("./pages/MoreDetails/MoreDetails"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -31,8 +33,10 @@ const App = () => {
     getSlider();
   }, []);
 
+  // En caso de agregar un loading a la página de inicio, activar el fallback en línea 39.
+
   return (
-    <>
+    <Suspense /* fallback={<Loading />} */>
       <Navbar />
       <HomePage slider={slider} />
       <AboutUs />
@@ -41,7 +45,7 @@ const App = () => {
       <MoreDetails />
       <Contact />
       <Footer />
-    </>
+    </Suspense>
   );
 };
 

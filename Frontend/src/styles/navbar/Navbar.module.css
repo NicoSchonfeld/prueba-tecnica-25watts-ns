@@ -138,6 +138,8 @@
 
   color: var(--unnamed-color-ffffff);
   font-size: 30px;
+
+  cursor: pointer;
 }
 
 /* Tablet */

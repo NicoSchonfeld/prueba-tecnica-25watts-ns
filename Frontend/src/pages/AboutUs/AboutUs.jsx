@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../styles/AboutUs/AboutUs.module.css";
 
 import image1 from "../../assets/25Watts/images/image-1.png";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 
 const AboutUs = () => {
   return (
@@ -28,7 +28,15 @@ const AboutUs = () => {
               pariatur, nemo aut non minima. Fugit.
             </p>
 
-            <button className={styles.button}>More info</button>
+            <Link
+              to={"products"}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={200}
+            >
+              <button className={styles.button}>More info</button>
+            </Link>
           </div>
         </div>
       </section>

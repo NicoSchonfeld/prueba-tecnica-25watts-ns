@@ -17,12 +17,12 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   const links = [
-    { id: 1, title: "Home", path: "home" },
-    { id: 2, title: "About us", path: "about_us" },
-    { id: 3, title: "Services", path: "services" },
-    { id: 4, title: "Products", path: "products" },
-    { id: 5, title: "Details", path: "details" },
-    { id: 6, title: "Contact", path: "contact" },
+    { id: 1, title: "Home", titleMobile: "HOME", path: "home" },
+    { id: 2, title: "About us", titleMobile: "ABOUT US", path: "about_us" },
+    { id: 3, title: "Services", titleMobile: "SERVICES", path: "services" },
+    { id: 4, title: "Products", titleMobile: "PRODUCTS", path: "products" },
+    { id: 5, title: "Details", titleMobile: "DETAILS", path: "details" },
+    { id: 6, title: "Contact", titleMobile: "CONTACT", path: "contact" },
   ];
 
   useEffect(() => {
@@ -130,7 +130,7 @@ const Navbar = () => {
                       }
                       onClick={() => setMenu(!menu)}
                     >
-                      {link?.title}
+                      {link?.titleMobile}
                     </Link>
                   </li>
                 ))}
