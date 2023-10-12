@@ -17,7 +17,8 @@ const Contact = () => {
   const onSubmit = (data) => {
     if (data) {
       try {
-        const url = "http://localhost:8989/api/contact";
+        const url =
+          "https://prueba-tecnica-25watts-ns-production.up.railway.app/api/contact";
 
         fetch(url, {
           method: "POST",

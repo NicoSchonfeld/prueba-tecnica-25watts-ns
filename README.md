@@ -44,7 +44,7 @@ Frontend:
 [25Watts-NicoSchonfeld](https://prueba-tecnica-25watts-ns.vercel.app/)
 
 Backend:
-[25Watts-Backend-NicoSchonfeld](...)
+[25Watts-Backend-NicoSchonfeld](https://prueba-tecnica-25watts-ns-production.up.railway.app/)
 
 ## Correr proyecto en localhost
 

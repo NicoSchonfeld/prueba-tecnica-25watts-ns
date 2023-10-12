@@ -15,14 +15,20 @@ const App = () => {
   const [slider, setSlider] = useState([]);
 
   const getProducts = async () => {
-    const res = await fetch("http://localhost:8989/api/products");
+    /* http://localhost:8989 */
+
+    const res = await fetch(
+      "https://prueba-tecnica-25watts-ns-production.up.railway.app/api/products"
+    );
     const data = await res.json();
 
     setProducts(data);
   };
 
   const getSlider = async () => {
-    const res = await fetch("http://localhost:8989/api/slider");
+    const res = await fetch(
+      "https://prueba-tecnica-25watts-ns-production.up.railway.app/api/slider"
+    );
     const data = await res.json();
 
     setSlider(data);
