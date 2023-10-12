@@ -42,7 +42,7 @@ const App = () => {
   // En caso de agregar un loading a la página de inicio, activar el fallback en línea 39.
 
   return (
-    <Suspense /* fallback={<Loading />} */>
+    <Suspense fallback={<Loading />}>
       <Navbar />
       <HomePage slider={slider} />
       <AboutUs />
