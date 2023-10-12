@@ -110,16 +110,11 @@ const products = [
 ];
 
 const randomProducts = (products) => {
-  // Recibe como parametro un array
-  // i debe ser 1 menos a la longitud del array ya que se genera un numero aleatorio que este dentro del rango de la longitud.
-
   for (let i = products?.length - 1; i > 0; i--) {
     const randomNum = Math.floor(Math.random() * (i + 1));
 
-    // almacenamos el valor que se encuentre en la posicion products[i]
     const posicionArray = products[i];
 
-    // Realizamos los cambios
     products[i] = products[randomNum];
     products[randomNum] = posicionArray;
   }
